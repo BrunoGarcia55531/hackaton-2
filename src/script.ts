@@ -1,6 +1,6 @@
 import {
-axiosGet,
-axiosPost,
-axiosPut,
-axiosDelete
-} from './api.js'
+    axiosGet,
+    axiosPost,
+    axiosPut,
+    axiosDelete
+} from './api'
