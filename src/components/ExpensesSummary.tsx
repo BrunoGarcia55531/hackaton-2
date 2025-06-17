@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useExpenses } from '../contexts/ExpensesContext';
 import { useAuth } from '../contexts/AuthContext';
 import { fetchWithAuth } from '../utils/fetchWithAuth';
 import { useNavigate } from 'react-router-dom';
 
 const ExpensesSummary = () => {
-  const { summary, setSummary, categories, setCategories } = useExpenses();
+  const { summary, setSummary, setCategories } = useExpenses();
   const { user } = useAuth();
   const navigate = useNavigate();
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -6,9 +5,9 @@ const Navbar = () => {
   const { user, logout } = useAuth();
   return (
     <div className="navbar bg-gradient-to-r from-primary to-secondary shadow-lg mb-8 px-4">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center max-w-7xl">
         <Link to="/" className="btn btn-ghost normal-case text-2xl text-white font-extrabold tracking-wide">Ahorrista</Link>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <Link to="/" className="btn btn-ghost text-white">Resumen</Link>
           <Link to="/goals" className="btn btn-ghost text-white">Metas</Link>
           {user ? (

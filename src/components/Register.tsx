@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 
 const Register = () => {
-  const { login } = useAuth();
+  const { } = useAuth();
   const [email, setEmail] = useState('');
   const [passwd, setPasswd] = useState('');
   const [error, setError] = useState('');
