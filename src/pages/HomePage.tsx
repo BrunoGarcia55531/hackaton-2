@@ -35,13 +35,13 @@ export function HomePage() {
                         <>
                             <button
                                 onClick={() => navigate('/register')}
-                                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white !bg-indigo-600 hover:!bg-indigo-800 !transition-colors duration-500 ease-in-out"
                             >
                                 Registrarse
                             </button>
                             <button
                                 onClick={() => navigate('/login')}
-                                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
+                                className="inline-flex items-center px-6 py-3 border text-base font-medium rounded-md !text-indigo-600 !bg-white hover:!bg-gray-200 !border-indigo-600 !transition-colors duration-500 ease-in-out"
                             >
                                 Iniciar sesión
                             </button>
