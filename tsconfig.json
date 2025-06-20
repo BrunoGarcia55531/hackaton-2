@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "ES2018",
     "module": "ES6",
-    "strict": true,
+    "rootDir": "./src",
+    "outDir": "./dist", // Cambiado a una carpeta separada (evita sobreescribir 'src')
     "esModuleInterop": true,
+    "strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "jsx": "react-jsx", // Añadido para soporte de React
+    "moduleResolution": "node", // Recomendado para Vite/React
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2018"
+    ] // Añadido para APIs del navegador
   },
-  "include": ["src/**/*"],
-  "exclude": ["dist"]
+  "include": [
+    "src/**/*"
+  ], // Incluye todo en 'src'
+  "exclude": [
+    "node_modules",
+    "dist"
+  ] // Excluye carpetas de build y dependencias
 }
