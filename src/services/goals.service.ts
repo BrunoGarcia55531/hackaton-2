@@ -1,4 +1,4 @@
-import { axiosGet, axiosPost, axiosPut } from '../api';
+import { axiosGet, axiosPost, axiosPut, axiosPatch } from '../api';
 import type {
     Goal,
     GoalResponse,
@@ -21,7 +21,7 @@ export class GoalsService {
     }
 
     static async updateGoal(id: number, goal: UpdateGoalRequest): Promise<Goal> {
-        const response = await axiosPut<CreateUpdateGoalResponse>(`${BASE_URL}/goals/${id}`, goal);
+        const response = await axiosPatch<CreateUpdateGoalResponse>(`${BASE_URL}/goals/${id}`, goal);
         return response.data;
     }
 }

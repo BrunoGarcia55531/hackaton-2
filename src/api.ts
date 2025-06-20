@@ -37,3 +37,9 @@ export const axiosDelete = async <T>(url: string, requiresAuth: boolean = true):
     const response: AxiosResponse<T> = await axios.delete(url, config);
     return response.data;
 };
+
+export const axiosPatch = async <T>(url: string, data: any, requiresAuth: boolean = true): Promise<T> => {
+    const config = requiresAuth ? getAuthConfig() : {};
+    const response: AxiosResponse<T> = await axios.patch(url, data, config);
+    return response.data;
+};
